@@ -36,17 +36,19 @@
 	<div class="article-wrapper">
 		<div style="flex: 1 1">
 			<div class="sidebar">
-				<ul>
-					<li>Limits</li>
-					<li>Derivatives</li>
-					<li>Integrals</li>
-				</ul>
+				{{ title }}
+				{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
 			</div>
 		</div>
 		<div style="flex: 1 1">
 			<article class="article-body">
 				{{ content | safe }}
 			</article>
+			{% set previousPost = collections.all | eleventyNavigation | navigationPrevious %}
+			{% if previousPost %}Previous Page: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
+
+			{% set nextPost = collections.all | eleventyNavigation | navigationNext %}
+			{% if nextPost %}Next Article: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
 		</div>
 		<div style="flex: 1 1"></div>
 	</div>

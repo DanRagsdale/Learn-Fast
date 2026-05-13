@@ -9,8 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
+    "@11ty/eleventy-navigation": "^1.0.5",
     "evaluatex": "^2.2.0",
     "mathjax": "^4.1.2"
   }
