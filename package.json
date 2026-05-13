@@ -1,0 +1,17 @@
+{
+  "name": "learn-fast",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "evaluatex": "^2.2.0",
+    "mathjax": "^4.1.2"
+  }
+}

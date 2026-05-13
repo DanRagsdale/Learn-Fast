@@ -1,0 +1,65 @@
+---
+title: My Rad Blog
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+	<script id="MathJax-script" async src="/node_modules/mathjax/tex-chtml.js"></script>
+	<script src="/node_modules/evaluatex/dist/evaluatex.min.js"></script>
+
+	<link rel="stylesheet" href="/assets/mathquill-matrix/mathquill.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="/assets/mathquill-matrix/mathquill.js"></script>
+
+	<script src="/assets/ProblemBox.js"></script>
+	
+	<style type="text/css">
+		body {
+			background-color: #F0F0F0;
+			margin: 0;
+			padding: 0;
+		
+
+			--nav-bar-height: 3em;
+		}
+
+		.nav-bar {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: var(--nav-bar-height);
+			background-color: #333333;
+			color: #EEEEEE;
+
+			position: sticky;
+			top: 0;
+		}
+
+		.nav-bar ul {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			
+			list-style-type: none;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+  </head>
+  <body>
+	<header class="nav-bar">
+		<ul>
+			<li>Home</li>
+			<li>Articles</li>
+			<li>About</li>
+		</ul>
+	</header>
+	{{ content | safe }}
+  </body>
+</html>

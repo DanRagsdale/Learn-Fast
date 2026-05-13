@@ -1,0 +1,52 @@
+---
+  title: Learn for Real,
+  layout: layouts/main.html
+---
+	<style type="text/css">
+		.article-wrapper {
+			height:100%;
+			display: flex;
+		}
+		.sidebar{
+			background-color: red;
+			width: 20em;
+			height: calc(100vh - var(--nav-bar-height));
+
+			position: sticky;
+			top: 3em;
+
+			box-sizing: border-box;
+			padding: 3em;
+		}
+		.article-body{
+			margin: 40px auto;
+			max-width:700px;
+			min-width: 350px;
+			line-height:1.6;
+			font-size:18px;
+			color:#444;
+			padding:0 10px;
+		}
+
+		h1,h2,h3{
+			line-height:1.2
+		}
+	</style>
+
+	<div class="article-wrapper">
+		<div style="flex: 1 1">
+			<div class="sidebar">
+				<ul>
+					<li>Limits</li>
+					<li>Derivatives</li>
+					<li>Integrals</li>
+				</ul>
+			</div>
+		</div>
+		<div style="flex: 1 1">
+			<article class="article-body">
+				{{ content | safe }}
+			</article>
+		</div>
+		<div style="flex: 1 1"></div>
+	</div>
